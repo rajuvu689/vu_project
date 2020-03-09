@@ -1,9 +1,9 @@
 from django.shortcuts import render
+from .models import Contact
 
 # Create your views here.
 def home(request):
     context = {
-        'status':'working on the contact manager app',
-        'age':'22'
+        'contacts': Contact.objects.all()
     }
     return render (request, 'index.html',context)
