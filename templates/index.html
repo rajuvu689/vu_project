@@ -56,71 +56,17 @@
    {% if contacts %}
    {% for contact in contacts %}
    
-  {% if contact.gender == 'male' %}
-  <!-- Card for details -->
-      <div class="card my-2 mx-2 boy-card">
-        <img src="{% if contact.image %}
-        {{contact.image.url}}
-        {% else %}
-        {% static 'images\boy.png' %}
-        {% endif %}" 
-        class="img-fluid" />
-        <div class="card-header">
-          <a href="detail.html" class="text-white header-link"
-            ><i class="fas fa-mars mr-2"></i>{{contact.name}}</a
-          >
-        </div>
-        <div class="card-body pb-0">
-          <p>
-            <i class="fas fa-at mr-2"></i>
-            <a href="mailto:{{contact.email}}">{{contact.email}}</a>
-          </p>
-          <p>
-            <i class="fas fa-phone mr-2"></i>
-            <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
-          </p>
-          <p><i class="fas fa-info-circle mr-2"></i>{{contact.info}}</p>
-        </div>
-      </div>
-      <!-- Card for details ends -->
-  {% else %}
-       <div class="card my-2 mx-2 girl-card">
-        <img src="{% if contact.image %}
-        {{contact.image.url}}
-        {% else %}
-        {% static 'images\girl.png' %}
-        {% endif %}" class="img-fluid" />
-        <div class="card-header">
-          <a href="detail.html" class="text-white header-link"
-            ><i class="fas fa-venus mr-2"></i>{{contact.name}}</a
-          >
-        </div>
-        <div class="card-body pb-0">
-          <p>
-            <i class="fas fa-at mr-2"></i>
-            <a href="mailto:{{contact.email}}">{{contact.email}}</a>
-          </p>
-          <p>
-            <i class="fas fa-phone mr-2"></i>
-            <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
-          </p>
-          <p><i class="fas fa-info-circle mr-2"></i> {{contact.info}}</p>
-        </div>
-      </div>
-    
-    <!-- Main Section ends-->
-  {% endif %}
-
+  {% include 'partials/_card.html'%}
+     
+ 
    {% endfor %}
    {% else %}
-   <p>No contacts </p>
+   <p class = "d-block font-weight-light my-2 heading">You have not save any contacts yet!</p>
    {% endif %}
-     
-</div>
-
+      </div>
     <!-- footer -->
     <footer class="mt-4 p-2">
-      <p class="text-center p-1 m-0">&copy; My Contacts 2019</p>
+      <p class="text-center p-1 m-0">&copy; My Contacts 2020</p>
     </footer>
     <!-- footer ends -->
   </body>
