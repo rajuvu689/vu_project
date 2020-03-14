@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 from .models import Contact
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'gender', 'email', 'info', 'phone','image')
+    list_display = ('id','name', 'gender', 'email', 'info', 'phone','image')
     list_editable = ('info',)
     list_per_page = 10
     search_fields = ('name', 'gender', 'email', 'info', 'phone')

@@ -2,7 +2,7 @@
 
 {% if contact.gender == 'male' %}
   <!-- Card for details -->
-      <div class="card my-2 mx-2 boy-card">
+      <div class="card my-2 mx-2 boy-card {% if 'detail' in request.path %}mx-auto w-25">
         <img src="{% if contact.image %}
         {{contact.image.url}}
         {% else %}
@@ -10,7 +10,7 @@
         {% endif %}" 
         class="img-fluid" />
         <div class="card-header">
-          <a href="detail.html" class="text-white header-link"
+          <a href="{%url 'detail' contact.id %}" class="text-white header-link"
             ><i class="fas fa-mars mr-2"></i>{{contact.name}}</a
           >
         </div>
@@ -35,7 +35,7 @@
         {% static 'images\girl.png' %}
         {% endif %}" class="img-fluid" />
         <div class="card-header">
-          <a href="detail.html" class="text-white header-link"
+          <a href="{%url 'detail' contact.id %}" class="text-white header-link"
             ><i class="fas fa-venus mr-2"></i>{{contact.name}}</a
           >
         </div>

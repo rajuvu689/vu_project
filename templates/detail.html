@@ -25,7 +25,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     />
-    <title>My Contacts</title>
+    <title>{{contact.name}}</title>
   </head>
 
   <body>
@@ -48,31 +48,14 @@
     <br />
 
     <!-- Main Section -->
+    {{request.path}}
     <div class="container">
-      <h2 class="heading font-weight-light text-center">Card Heading</h2>
+      <h2 class="heading font-weight-light text-center">{{contact.name}}</h2>
       <hr />
     </div>
     <div class="container main-part">
       <!-- Card for details -->
-      <div class="card my-2 boy-card w-25 mx-auto">
-        <img src="https://placeimg.com/230/130/people" class="img-fluid" />
-        <div class="card-header">
-          <a href="#" class="text-white header-link"
-            ><i class="fas fa-mars mr-2"></i> John Wood</a
-          >
-        </div>
-        <div class="card-body pb-0">
-          <p>
-            <i class="fas fa-at mr-2"></i>
-            <a href="mailto:johonwood@gmail.com">johonwood@gmail.com</a>
-          </p>
-          <p>
-            <i class="fas fa-phone mr-2"></i>
-            <a href="tel:9001010100">9001010100</a>
-          </p>
-          <p><i class="fas fa-info-circle mr-2"></i> Friend</p>
-        </div>
-      </div>
+      {% include 'partials/_card.html' %}
     </div>
     <!-- Main Section ends-->
 
