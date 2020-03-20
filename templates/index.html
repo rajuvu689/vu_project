@@ -1,73 +1,28 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+{% extends 'base.html' %} 
+  {% load static %}
+  {% block title %}
+   My Contacts
+   {% endblock title%}
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static './css/main.css' %}" />
+  {% block content %}
 
-    <!-- Fonts & Icons -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    />
-    <title>My Contacts</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-
-    <nav>
-      <a class="logo" href="/index.html">
-        <i class="fas fa-user-circle"></i>&nbsp;Contacts
-      </a>
-      <form class="form-inline my-2" action="search.html">
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Find contacts..."
-        />
-        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-      </form>
-    </nav>
-    <!-- Navbar ends -->
-    <br />
-
-    <!-- Main Section -->
+  <!-- Main Section -->
     <div class="container">
       <h3 class="heading font-weight-light">Here are your contacts</h3>
+     
       <hr />
     </div>
     <div class="container main-part">
    {% if contacts %}
    {% for contact in contacts %}
    
-  {% include 'partials/_card.html'%}
-     
- 
+  {% include 'partials/_card.html' %}
    {% endfor %}
    {% else %}
-   <p class = "d-block font-weight-light my-2 heading">You have not save any contacts yet!</p>
+   <p class="d-block font-weight-light my-2 heading"> You have not save any contact yet </p>
    {% endif %}
-      </div>
-    <!-- footer -->
-    <footer class="mt-4 p-2">
-      <p class="text-center p-1 m-0">&copy; My Contacts 2020</p>
-    </footer>
-    <!-- footer ends -->
-  </body>
-</html>
+     
+</div>
+
+    {% endblock content %}
+

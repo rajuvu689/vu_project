@@ -1,54 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="main.css" />
-
-    <!-- Fonts & Icons -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    />
-    <title>{{contact.name}}</title>
-  </head>
-
-  <body>
-    <!-- Navbar -->
-
-    <nav>
-      <a class="logo" href="/index.html">
-        <i class="fas fa-user-circle"></i>&nbsp;Contacts
-      </a>
-      <form class="form-inline my-2" action="search.html">
-        <input
-          class="form-control"
-          type="text"
-          placeholder="Find contacts..."
-        />
-        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-      </form>
-    </nav>
-    <!-- Navbar ends -->
-    <br />
+{% extends 'base.html' %} 
+  {% load static %}
+  {% block title %}
+{{contact.name}}
+   {% endblock title%}
+ {% block content %}
 
     <!-- Main Section -->
-    {{request.path}}
+    
     <div class="container">
       <h2 class="heading font-weight-light text-center">{{contact.name}}</h2>
       <hr />
@@ -59,10 +17,4 @@
     </div>
     <!-- Main Section ends-->
 
-    <!-- footer -->
-    <footer class="mt-4 p-2">
-      <p class="text-center p-1 m-0">&copy; My Contacts 2019</p>
-    </footer>
-    <!-- footer ends -->
-  </body>
-</html>
+       {% endblock content %}
