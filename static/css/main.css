@@ -33,20 +33,8 @@ nav {
   color: white;
   text-decoration: none;
 }
-form {
-  position: relative;
-}
-button {
-  position: absolute;
-  right: 1px;
-  outline: none;
-  cursor: pointer;
-}
-button i {
-  color: var(--back);
-}
 
-input {
+.search-box {
   border-radius: 0px !important;
   width: 250px;
   border: none !important;
@@ -125,6 +113,11 @@ footer {
 
   .logo {
     font-size: 22px !important;
+  }
+
+  .feature-link {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
   /* navbar style ends */
 
