@@ -20,6 +20,6 @@ python manage.py migrate
 python manage.py runserver
 
 
-Note: This project is created in virtual environment fylly. So, you may need to install django and python in vs Code. 
+Note: This project is created in virtual environment. So, you may need to install django and python in vs Code. 
 
 
