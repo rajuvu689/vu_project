@@ -1,4 +1,4 @@
-# vu_project
+# University Project on Python and Django
 # Contact Manager
 
 
